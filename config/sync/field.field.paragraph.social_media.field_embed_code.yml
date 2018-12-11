@@ -1,0 +1,21 @@
+uuid: bee4faaf-86d7-4190-87e8-929fb4c31e23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embed_code
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - text
+id: paragraph.social_media.field_embed_code
+field_name: field_embed_code
+entity_type: paragraph
+bundle: social_media
+label: 'Embed Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
