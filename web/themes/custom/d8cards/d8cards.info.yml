@@ -1,0 +1,5 @@
+name: D8Cards
+type: theme
+description: 'A test theme for d8cards.'
+core: 8.x
+base theme: bartik
