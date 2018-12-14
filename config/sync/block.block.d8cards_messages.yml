@@ -1,0 +1,22 @@
+uuid: 399d842f-a46a-4ea6-84cb-55cd5b436c71
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d8cards
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: d8cards_messages
+theme: d8cards
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

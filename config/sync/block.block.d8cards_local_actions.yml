@@ -1,0 +1,20 @@
+uuid: 5c095b04-bb1f-4606-96ff-cd278654492c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - d8cards
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: d8cards_local_actions
+theme: d8cards
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

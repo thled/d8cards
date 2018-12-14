@@ -1,0 +1,22 @@
+uuid: 03a0b96f-c5d8-4936-9495-581ae7d6078c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d8cards
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: d8cards_content
+theme: d8cards
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
