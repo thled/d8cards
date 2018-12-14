@@ -49,3 +49,24 @@ Screengrabs: https://www.evernote.com/l/ASmw_AMKx2dFaqaeh3jyTA4icDft3dhvopM
         </tr>
     </table>
     ```
+
+## Dupal8Cards #03 ­- Building Configuration forms #
+
+### Objective
+
+At the end of this course, you will be able to
+
+1. Create a very basic configuration form on a custom page
+1. UProvide Default values for the configuration on the form
+1. Save the configuration values on form submission.
+
+### Exercise
+
+1. Create a custom module that provides a configuration form available at the url “mymodule/config” to all users with the permission “administer content”
+1. The form shall have 3 fields. Labels and Types of fields are arbitrary. Ensure you have diverse fields ­ Text, Select, Radio
+1. Get the form to work such that the form values are saved and persisted on the form on reload.
+1. The values submitted on the form should be accessible elsewhere on the same or a different module using the Config API.
+
+### Bonus Exercise
+
+* Create your own permission and use that to restrict this page
