@@ -16,14 +16,14 @@ mode: default
 content:
   field_embed_code:
     weight: 0
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_link:
     weight: 1
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false

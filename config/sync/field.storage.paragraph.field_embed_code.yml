@@ -10,7 +10,7 @@ field_name: field_embed_code
 entity_type: paragraph
 type: text
 settings:
-  max_length: 255
+  max_length: 2000
 module: text
 locked: false
 cardinality: 1
