@@ -1,0 +1,5 @@
+name: Three Confs
+type: module
+description: 'Set the 3 most important configurations.'
+core: 8.x
+package: confs
