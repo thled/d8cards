@@ -1,7 +1,7 @@
 three_confs.config_form:
   path: '/three-confs/config'
   defaults:
-    _controller: '\Drupal\three_confs\Controller\ConfigController::configForm'
-    _title: 'Config Form'
+    _form: '\Drupal\three_confs\Form\ConfigForm'
+    _title: 'Three most important Confs'
   requirements:
     _permission: 'administer content'
