@@ -5,3 +5,11 @@ three_confs.config_form:
     _title: 'Three most important Confs'
   requirements:
     _permission: 'administer content'
+
+three_confs.show_config:
+  path: '/three-confs/show'
+  defaults:
+    _controller: '\Drupal\three_confs\Controller\ShowConfig::show'
+    _title: 'Read saved Confs'
+  requirements:
+    _permission: 'access content'
