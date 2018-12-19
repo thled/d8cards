@@ -16,16 +16,19 @@ class ConfigForm extends ConfigFormBase
   protected function getEditableConfigNames()
   {
     return [
-      'three_confs.answer_universe',
+      'three_confs.important',
     ];
   }
 
   public function buildForm(array $form, FormStateInterface $form_state)
   {
+    $config = $this->config('three_confs.important');
+
     $form['#title'] = $this->t('Important Confs');
     $form['answer_universe'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Answer to everyting'),
+      '#default_value' => $config->get('answer_universe') ?? '',
       '#required' => true,
       '#weight' => 0,
     ];
@@ -37,6 +40,7 @@ class ConfigForm extends ConfigFormBase
     $form['best_language'] = [
       '#type' => 'select',
       '#title' => $this->t('Best programming language'),
+      '#default_value' => $config->get('best_language') ?? '',
       '#required' => true,
       '#weight' => 0,
       '#options' => $languages,
@@ -44,9 +48,8 @@ class ConfigForm extends ConfigFormBase
     $form['dark_mode'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Dark mode'),
-      '#required' => true,
+      '#default_value' => $config->get('dark_mode') ?? 1,
       '#weight' => 0,
-      '#default_value' => 1,
     ];
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['submit'] = [
@@ -66,9 +69,13 @@ class ConfigForm extends ConfigFormBase
 
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
-    foreach ($form_state->getValues() as $key => $value) {
-      drupal_set_message($key . ': ' . $value);
-    }
+    $this->config('three_confs.important')
+      ->set('answer_universe', $form_state->getValue('answer_universe'))
+      ->set('best_language', $form_state->getValue('best_language'))
+      ->set('dark_mode', $form_state->getValue('dark_mode'))
+      ->save();
+
+    parent::submitForm($form, $form_state);
   }
 
 }
