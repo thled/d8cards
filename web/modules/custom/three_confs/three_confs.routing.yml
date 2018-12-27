@@ -4,7 +4,7 @@ three_confs.config_form:
     _form: '\Drupal\three_confs\Form\ConfigForm'
     _title: 'Three most important Confs'
   requirements:
-    _permission: 'administer content'
+    _permission: 'administer three_confs'
 
 three_confs.show_config:
   path: '/three-confs/show'
