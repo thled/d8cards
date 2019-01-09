@@ -1,0 +1,46 @@
+uuid: 5bcefb5b-16f4-4b0d-91ac-a491bdffe516
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.movie.field_actors
+    - field.field.node.movie.field_genre
+    - field.field.node.movie.field_plot
+    - node.type.movie
+  module:
+    - text
+    - user
+id: node.movie.default
+targetEntityType: node
+bundle: movie
+mode: default
+content:
+  field_actors:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_genre:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_plot:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

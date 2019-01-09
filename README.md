@@ -6,8 +6,8 @@
 
 At the end of this course, you will be able to
 
-1. export configuration from a local or Dev environment
-1. transfer the same by copying the files or through version control to another environment
+* export configuration from a local or Dev environment
+* transfer the same by copying the files or through version control to another environment
 
 Thereby, moving version controlled configuration across various environments.
 
@@ -26,8 +26,8 @@ Thereby, moving version controlled configuration across various environments.
 
 At the end of this course, you will be able to
 
-1. Create paragraph types
-1. Use paragraphs in content types to display grouped fields appropriately.
+* Create paragraph types
+* Use paragraphs in content types to display grouped fields appropriately.
 
 ### Exercise
 
@@ -56,9 +56,9 @@ Screengrabs: https://www.evernote.com/l/ASmw_AMKx2dFaqaeh3jyTA4icDft3dhvopM
 
 At the end of this course, you will be able to
 
-1. Create a very basic configuration form on a custom page
-1. UProvide Default values for the configuration on the form
-1. Save the configuration values on form submission.
+* Create a very basic configuration form on a custom page
+* UProvide Default values for the configuration on the form
+* Save the configuration values on form submission.
 
 ### Exercise
 
@@ -70,3 +70,24 @@ At the end of this course, you will be able to
 ### Bonus Exercise
 
 * Create your own permission and use that to restrict this page
+
+## Dupal8Cards #04 ­- Migration 101 #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* Import content from MySQL/CSV dump to content types, taxonomies in Drupal.
+
+### Exercise
+
+1. Create a movie content type with fields ­ Title (text), Plot(Formatted Text), Actors (Node Reference), Genre(Term Reference)
+1. Actors and Genres are simple content type and vocab respectively with no additional fields
+1. Import the CSV dumps from [here](https://drive.google.com/drive/folders/0BzCHjdGh1ZXAdGVudW9ybnBwREU) to populate the movie nodes in Drupal using Migrate API.
+
+Preview Content: [Movies](https://www.evernote.com/l/ASk8HlRO67xMuagUArvsUDDcP3YK5AGuVro), [Actors](https://www.evernote.com/l/ASlyjvoonFhLdoi48KdFn9_Q33JNOoLB0HY)
+
+### Bonus Exercise
+
+* Let’s try some preprocessing while migrating. In the plot field of the movie, remove the word “the” (wherever it occurs, irrespective of the letter case).
+* Add an Image field to the Movie content type. Update the migration script to use the dump file with images. Re­run the migration such that the images are downloaded and attached to the movie nodes.
