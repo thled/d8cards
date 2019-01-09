@@ -1,0 +1,25 @@
+uuid: dca182cf-9cc7-474c-93be-b419e03a7a9b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:53b4f6b0-19ed-48bd-b5df-1667d553ec59'
+  module:
+    - block_content
+  theme:
+    - d8cards
+id: stockfreeport
+theme: d8cards
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:53b4f6b0-19ed-48bd-b5df-1667d553ec59'
+settings:
+  id: 'block_content:53b4f6b0-19ed-48bd-b5df-1667d553ec59'
+  label: 'Stock Freeport'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

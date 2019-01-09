@@ -1,0 +1,25 @@
+uuid: 1c044c8b-34aa-482a-bc99-37cc3e3660b8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:2a6fcecc-511d-4da5-aa3b-02a603852ee5'
+  module:
+    - block_content
+  theme:
+    - d8cards
+id: stockbankofamerica
+theme: d8cards
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:2a6fcecc-511d-4da5-aa3b-02a603852ee5'
+settings:
+  id: 'block_content:2a6fcecc-511d-4da5-aa3b-02a603852ee5'
+  label: 'Stock Bank of America'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

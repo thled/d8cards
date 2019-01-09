@@ -1,0 +1,25 @@
+uuid: 2b5a20d2-cf02-479b-8211-64b8701ac473
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:9c6f99f2-6095-41d5-a422-eb6c46c2a6e0'
+  module:
+    - block_content
+  theme:
+    - d8cards
+id: stockapple
+theme: d8cards
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:9c6f99f2-6095-41d5-a422-eb6c46c2a6e0'
+settings:
+  id: 'block_content:9c6f99f2-6095-41d5-a422-eb6c46c2a6e0'
+  label: 'Stock Apple'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
