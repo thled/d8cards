@@ -91,3 +91,28 @@ Preview Content: [Movies](https://www.evernote.com/l/ASk8HlRO67xMuagUArvsUDDcP3Y
 
 * Let’s try some preprocessing while migrating. In the plot field of the movie, remove the word “the” (wherever it occurs, irrespective of the letter case).
 * Add an Image field to the Movie content type. Update the migration script to use the dump file with images. Re­run the migration such that the images are downloaded and attached to the movie nodes.
+
+## Dupal8Cards #05 ­- Block System #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* Create "Block Types" with fields
+* Place Multiple Instances of the block type with different field values
+* Programmatically update block instance values / content
+
+### Exercise
+
+1. Create a Block type called "Stock Exchange Rate Card"
+    * Company Name
+    * Symbol
+    * Last Price
+    * Change
+1. Create Instances of the block with different sets of values and place them at different spots on the site. Example values ­ (Apple, AAPL), (Bank of America,BAC), (Transocean, RIG), (Freeport, FCX). (Ignore the Last Price and Change fields’ values, we will be dealing them in next step).
+1. Below API can be used to retrieve Last Price and Change values
+    http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=BAC&callback=myFunction
+1. Build a custom module, which on Cron run,
+    * Iterates through each instance of blocks of type "Stock Exchange Price Card"
+    * For each block, take the symbol value and call the API to retrieve the Last Price and Change values
+    * Update the block field values programmatically with the values of Last Price and Change retrieved from the API and save the block
