@@ -1,0 +1,8 @@
+stock_api.api:
+  path: '/stock/api'
+  defaults:
+    _controller: '\Drupal\stock_api\Controller\Api::fetch'
+    _title: 'Stock API JSON'
+  requirements:
+    _permission: 'access content'
+
