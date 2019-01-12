@@ -1,0 +1,5 @@
+<?php
+
+function stock_api_cron(){
+  \Drupal::service('stock_api.stock_updater')->updateAllStocks();
+}
