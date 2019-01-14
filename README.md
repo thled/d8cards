@@ -116,3 +116,17 @@ At the end of this course, you will be able to
     * Iterates through each instance of blocks of type "Stock Exchange Price Card"
     * For each block, take the symbol value and call the API to retrieve the Last Price and Change values
     * Update the block field values programmatically with the values of Last Price and Change retrieved from the API and save the block
+
+## Dupal8Cards #06 ­- Services and Dependency Injection #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* What is dependency injection
+* Building Services and why build services
+* Core Services
+
+### Exercise
+
+This is not a Drupal API to have an exercise for itself
