@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Queue\QueueFactory;
+use Drupal\Core\Queue\QueueInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+function queue_reg_mail_user_insert(EntityInterface $user) {
+  /** @var QueueFactory $queueFactory */
+  $queueFactory = \Drupal::service('queue');
+  /** @var QueueInterface $queue */
+  $queue = $queueFactory->get('cron_welcome_mail');
+
+  $item = new \stdClass;
+  $item->uid = $user->id();
+  $queue->createItem($item);
+}
