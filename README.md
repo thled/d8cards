@@ -144,3 +144,17 @@ At the end of this course, you will be able to
 1. Build a module that sends a welcome email to registered users
 1. Use the Cron Queue by adding to the queue the user id whenever a user registers
 1. Create a queue worker that picks these queue items (uids) during the cron and sends a welcome email (can be any simple text) to the registered email address.
+
+## Dupal8Cards #08 ­- Plugin System: Text Filters #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* Understand a bit of the plugin system
+* Create a new Custom Text filter using the Plugin system
+
+### Exercise
+
+1. Create a custom text filter that could be added to any text format, which auto­capitalizes pre­configured words anywhere they occur in the filtered text
+1. The filter has a configuration form that allows to configure the list of words that should be auto­capitalized
