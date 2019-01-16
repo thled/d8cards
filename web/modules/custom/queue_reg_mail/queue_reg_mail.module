@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Queue\QueueFactory;
+use Drupal\Core\Queue\QueueInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+function queue_reg_mail_user_insert(EntityInterface $user)
+{
+  /** @var QueueFactory $queueFactory */
+  $queueFactory = \Drupal::service('queue');
+  /** @var QueueInterface $queue */
+  $queue = $queueFactory->get('cron_welcome_mail');
+
+  $queue->createItem($user->id());
+}
+
+function queue_reg_mail_mail($key, &$message, $params)
+{
+  if ($key === 'welcome_mail') {
+    $message['from'] = 'admin@d8c.com';
+    $message['subject'] = 'Welcome to my D8C Website!';
+    $message['body'][] = $params['message'];
+  }
+}

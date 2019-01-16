@@ -1,0 +1,5 @@
+name: Queue Registration Mail
+type: module
+description: 'Cron Queuing welcome mails for newly registered users'
+core: 8.x
+package: qrm

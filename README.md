@@ -130,3 +130,17 @@ At the end of this course, you will be able to
 ### Exercise
 
 This is not a Drupal API to have an exercise for itself
+
+## Dupal8Cards #07 ­- Cron Queuing #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* Understand and utilize the Queue API to add tasks to the queue and process them on cron runs
+
+### Exercise
+
+1. Build a module that sends a welcome email to registered users
+1. Use the Cron Queue by adding to the queue the user id whenever a user registers
+1. Create a queue worker that picks these queue items (uids) during the cron and sends a welcome email (can be any simple text) to the registered email address.
