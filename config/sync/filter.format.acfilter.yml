@@ -1,0 +1,16 @@
+uuid: c1e1be8e-122b-4991-8d5c-c7d25cc0793e
+langcode: en
+status: true
+dependencies:
+  module:
+    - auto_capitalize
+name: acFilter
+format: acfilter
+weight: 0
+filters:
+  auto_capitalize:
+    id: auto_capitalize
+    provider: auto_capitalize
+    status: true
+    weight: 0
+    settings: {  }

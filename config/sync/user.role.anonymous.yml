@@ -13,5 +13,6 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
+  - 'use text format acfilter'
   - 'use text format raw'
   - 'use text format restricted_html'
