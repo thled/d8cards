@@ -13,4 +13,5 @@ filters:
     provider: auto_capitalize
     status: true
     weight: 0
-    settings: {  }
+    settings:
+      capitalize_words: 'foo,Bar'
