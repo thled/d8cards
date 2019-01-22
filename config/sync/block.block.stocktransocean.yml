@@ -1,0 +1,25 @@
+uuid: 972ac400-345e-431f-bb69-2e4b4d82b9ff
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:f4c1cbb2-35d8-4f8e-89c1-cfb300831936'
+  module:
+    - block_content
+  theme:
+    - d8cards
+id: stocktransocean
+theme: d8cards
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:f4c1cbb2-35d8-4f8e-89c1-cfb300831936'
+settings:
+  id: 'block_content:f4c1cbb2-35d8-4f8e-89c1-cfb300831936'
+  label: 'Stock Transocean'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

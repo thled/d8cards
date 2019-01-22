@@ -1,0 +1,8 @@
+services:
+  stock_api.stock_updater:
+    class: \Drupal\stock_api\Command\StockUpdater
+    arguments:
+      - '@entity_type.manager'
+      - '@stock_api.stock_api_client'
+    tags:
+      - { name: drush.command }

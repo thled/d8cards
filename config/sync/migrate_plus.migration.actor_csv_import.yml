@@ -1,0 +1,32 @@
+uuid: ac9e4d79-dfb2-4077-9ea0-188b31c5572b
+langcode: en
+status: true
+dependencies: {  }
+id: actor_csv_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Import actors'
+source:
+  plugin: csv
+  path: 'public://actors.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: 'Unique Id'
+    -
+      title: Title
+process:
+  title: title
+  type:
+    plugin: default_value
+    default_value: actor
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

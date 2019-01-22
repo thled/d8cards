@@ -1,0 +1,5 @@
+services:
+  stock_api.stock_api_client:
+    class: 'Drupal\stock_api\Service\StockApiClient'
+    arguments:
+      - '@http_client_factory'

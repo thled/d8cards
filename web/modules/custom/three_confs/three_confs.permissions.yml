@@ -1,0 +1,4 @@
+administer three_confs:
+  title: 'Administer three important Configurations'
+  description: 'Configure Three Confs settings.'
+  restrict access: true

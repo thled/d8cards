@@ -1,0 +1,15 @@
+three_confs.config_form:
+  path: '/three-confs/config'
+  defaults:
+    _form: '\Drupal\three_confs\Form\ConfigForm'
+    _title: 'Three most important Confs'
+  requirements:
+    _permission: 'administer three_confs'
+
+three_confs.show_config:
+  path: '/three-confs/show'
+  defaults:
+    _controller: '\Drupal\three_confs\Controller\ShowConfig::show'
+    _title: 'Read saved Confs'
+  requirements:
+    _permission: 'access content'

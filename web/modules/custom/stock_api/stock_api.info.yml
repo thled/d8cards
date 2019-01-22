@@ -1,0 +1,5 @@
+name: Stock API
+type: module
+description: 'Retrieve Last Price and Change for different stocks'
+core: 8.x
+package: stock

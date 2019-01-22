@@ -1,0 +1,48 @@
+uuid: 9c5fc2bc-dbc0-4136-8c0b-e61189eaf267
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stock_exchange_rate_card
+    - field.field.block_content.stock_exchange_rate_card.field_change
+    - field.field.block_content.stock_exchange_rate_card.field_company_name
+    - field.field.block_content.stock_exchange_rate_card.field_last_price
+    - field.field.block_content.stock_exchange_rate_card.field_symbol
+id: block_content.stock_exchange_rate_card.default
+targetEntityType: block_content
+bundle: stock_exchange_rate_card
+mode: default
+content:
+  field_change:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_company_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_price:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_symbol:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

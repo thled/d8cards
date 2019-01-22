@@ -16,5 +16,6 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use text format acfilter'
   - 'use text format basic_html'
   - 'use text format raw'
