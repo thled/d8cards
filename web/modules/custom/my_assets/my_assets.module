@@ -12,5 +12,4 @@ function my_assets_block_view_block_content_alter(
   \Drupal\Core\Block\BlockPluginInterface $block
 ) {
   $build['#attached']['library'][] = 'my_assets/fancy-blocks';
-  dump($build);
 }
