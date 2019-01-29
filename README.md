@@ -173,3 +173,20 @@ At the end of this course, you will be able to
 1. Create a libraries.yml file and define 2 libraries one for each of the CSS and JS.
 1. Attach the CSS such that it is loaded for all Table elements shown anywhere on the site. [Hint](https://www.evernote.com/shard/s297/sh/d9be02e1-7167-42ff-b021-a1915c171794/d8fe46c64cc54283)
 1. Take any custom block that you have built over the previous exercises. Modify the build() to attach the JS to be loaded whenever the block is displayed. [Hint](https://www.evernote.com/shard/s297/sh/ad090511-4c94-4209-922a-13f934ddd704/fd6c52cfe8bddab3)
+
+## Dupal8Cards #10 ­- Configuring your local site for Development #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* Setting up your settings.local.php
+* Null Cache Service
+* Disabling Twig Cache
+* rebuild.php
+
+### Exercise
+
+1. On your local D8 site, perform all the configuration changes mentioned on the video tutorial.
+
+    Video tutorial: <https://www.youtube.com/watch?v=rRsOxSuJ4OU>
