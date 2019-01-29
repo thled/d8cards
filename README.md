@@ -158,3 +158,18 @@ At the end of this course, you will be able to
 
 1. Create a custom text filter that could be added to any text format, which auto­capitalizes pre­configured words anywhere they occur in the filtered text
 1. The filter has a configuration form that allows to configure the list of words that should be auto­capitalized
+
+## Dupal8Cards #09 ­- Attaching assets (CSS/JS) #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* add JS/CSS to a module or a theme to be available on selection / all pages
+
+### Exercise
+
+1. Create a custom module and add a CSS and JS file in appropriate subdirectories in the module.
+1. Create a libraries.yml file and define 2 libraries one for each of the CSS and JS.
+1. Attach the CSS such that it is loaded for all Table elements shown anywhere on the site. [Hint](https://www.evernote.com/shard/s297/sh/d9be02e1-7167-42ff-b021-a1915c171794/d8fe46c64cc54283)
+1. Take any custom block that you have built over the previous exercises. Modify the build() to attach the JS to be loaded whenever the block is displayed. [Hint](https://www.evernote.com/shard/s297/sh/ad090511-4c94-4209-922a-13f934ddd704/fd6c52cfe8bddab3)
