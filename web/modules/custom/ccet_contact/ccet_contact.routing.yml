@@ -1,0 +1,15 @@
+ccet_contact.collection:
+  path: '/admin/content/contact'
+  defaults:
+    _title: 'Contacts'
+    _entity_list: 'contact'
+  requirements:
+    _permission: 'access administration pages'
+
+ccet_contact.add:
+  path: '/contact/add'
+  defaults:
+    _title: 'Add contact'
+    _entity_form: 'contact.add'
+  requirements:
+    _permission: 'access administration pages'

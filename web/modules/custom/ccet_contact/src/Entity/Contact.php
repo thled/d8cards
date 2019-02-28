@@ -16,20 +16,48 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *     "id" = "id",
  *     "uuid" = "uuid",
  *   },
+ *   handlers = {
+ *     "list_builder" = "Drupal\ccet_contact\Controller\ContactListBuilder",
+ *     "form" = {
+ *       "add" = "Drupal\Core\Entity\ContentEntityForm"
+ *     }
+ *   },
  * )
  */
 class Contact extends ContentEntityBase implements ContentEntityInterface
 {
-  public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
-    $fields['id'] = BaseFieldDefinition::create('integer')
-      ->setLabel(t('ID'))
-      ->setDescription(t('The ID of the Contact entity.'))
-      ->setReadOnly(true);
+  public static function baseFieldDefinitions(EntityTypeInterface $entity_type)
+  {
+    $fields = parent::baseFieldDefinitions($entity_type);
 
-    $fields['uuid'] = BaseFieldDefinition::create('uuid')
-      ->setLabel(t('UUID'))
-      ->setDescription(t('The UUID of the Contact entity.'))
-      ->setReadOnly(true);
+    $fields['name'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Name'))
+      ->setRequired(true)
+      ->setDescription(t('The name of the Contact entity.'))
+      ->setSetting('max_length', 255)
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', true);
+
+    $fields['mail'] = BaseFieldDefinition::create('email')
+      ->setLabel(t('Email'))
+      ->setDescription(t('The email of the Contact entity.'))
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'email',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'email',
+        'weight' => -4,
+      ]);
 
     return $fields;
   }
