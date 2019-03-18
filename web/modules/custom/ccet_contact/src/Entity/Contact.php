@@ -18,6 +18,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *   },
  *   handlers = {
  *     "list_builder" = "Drupal\ccet_contact\Controller\ContactListBuilder",
+ *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "form" = {
  *       "add" = "Drupal\Core\Entity\ContentEntityForm"
  *     }

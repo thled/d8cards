@@ -13,3 +13,11 @@ ccet_contact.add:
     _entity_form: 'contact.add'
   requirements:
     _permission: 'access administration pages'
+
+ccet_contact.view:
+  path: '/contact/{contact}'
+  defaults:
+    _title: Contact Content
+    _entity_view: 'contact'
+  requirements:
+    _permission: 'access administration pages'

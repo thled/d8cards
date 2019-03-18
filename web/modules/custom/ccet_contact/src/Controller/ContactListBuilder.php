@@ -2,6 +2,7 @@
 
 namespace Drupal\ccet_contact\Controller;
 
+use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 
@@ -19,10 +20,17 @@ class ContactListBuilder extends EntityListBuilder
 
   public function buildRow(EntityInterface $entity)
   {
-    $row = [
-      'name' => $entity->name->value,
-      'mail' => $entity->mail->value,
+    $row['name']['data'] = [
+      '#type' => 'link',
+      '#url' => Url::fromRoute(
+        'ccet_contact.view',
+        [
+          'contact' => $entity->id->value,
+        ]
+      ),
+      '#title' => $entity->name->value,
     ];
+    $row['mail'] = $entity->mail->value;
 
     return $row + parent::buildRow($entity);
   }
