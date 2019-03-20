@@ -7,7 +7,7 @@ ccet_contact.collection:
     _permission: 'access administration pages'
 
 ccet_contact.add:
-  path: '/contact/add'
+  path: '/admin/contact/add'
   defaults:
     _title: 'Add contact'
     _entity_form: 'contact.add'
@@ -15,9 +15,26 @@ ccet_contact.add:
     _permission: 'access administration pages'
 
 ccet_contact.view:
-  path: '/contact/{contact}'
+  path: '/admin/contact/{contact}'
   defaults:
     _title: Contact Content
     _entity_view: 'contact'
   requirements:
     _permission: 'access administration pages'
+
+entity.contact.edit_form:
+  path: '/admin/contact/{contact}/edit'
+  defaults:
+    _entity_form: 'contact.edit'
+    title: 'Edit Contact'
+  requirements:
+    _permission: 'access administration pages'
+
+entity.contact.delete_form:
+  path: '/admin/contact/{contact}/delete'
+  defaults:
+    _entity_form: 'contact.delete'
+    title: 'Delete Contact'
+  requirements:
+    _permission: 'access administration pages'
+

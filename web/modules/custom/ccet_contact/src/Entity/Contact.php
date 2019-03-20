@@ -20,8 +20,15 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *     "list_builder" = "Drupal\ccet_contact\Controller\ContactListBuilder",
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "form" = {
- *       "add" = "Drupal\Core\Entity\ContentEntityForm"
- *     }
+ *       "add" = "Drupal\Core\Entity\ContentEntityForm",
+ *       "edit" = "Drupal\Core\Entity\ContentEntityForm",
+ *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm",
+ *     },
+ *     "access" = "Drupal\ccet_contact\ContactAccessControlHandler",
+ *   },
+ *   links = {
+ *     "edit-form" = "/",
+ *     "delete-form" = "/",
  *   },
  * )
  */
