@@ -4,8 +4,8 @@ namespace Drupal\ccet_contact\Entity;
 
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\ccet_contact\ContactInterface;
 
 /**
  * @ContentEntityType(
@@ -32,7 +32,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *   },
  * )
  */
-class Contact extends ContentEntityBase implements ContentEntityInterface
+class Contact extends ContentEntityBase implements ContactInterface
 {
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type)
   {
