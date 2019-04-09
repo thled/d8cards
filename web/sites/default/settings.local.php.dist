@@ -2,3 +2,5 @@
 
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.services.yml';
 $settings['cache']['bins']['render'] = 'cache.backend.null';
+
+$settings['class_loader_auto_detect'] = FALSE;

@@ -190,3 +190,21 @@ At the end of this course, you will be able to
 1. On your local D8 site, perform all the configuration changes mentioned on the video tutorial.
 
     Video tutorial: <https://www.youtube.com/watch?v=rRsOxSuJ4OU>
+
+## Dupal8Cards #11 ­- Creating a Custom D8 Content Entity Type #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* create a content entity type with administration management pages
+
+### Exercise
+
+1. Create a custom content entity type called “Contact” with the following fields:
+    * Name
+    * Email Address
+    * Telephone
+    * Address
+1. Build / Provide a minimal CRUD management page to manage the custom contact entities
+1. Explore why would you even want to define a custom entity type vs using a Content Type

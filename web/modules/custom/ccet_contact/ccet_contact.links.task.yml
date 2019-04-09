@@ -1,0 +1,4 @@
+ccet_contact.collection:
+  title: Contacts
+  route_name: ccet_contact.collection
+  base_route: system.admin_content
