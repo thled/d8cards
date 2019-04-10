@@ -208,3 +208,18 @@ At the end of this course, you will be able to
     * Address
 1. Build / Provide a minimal CRUD management page to manage the custom contact entities
 1. Explore why would you even want to define a custom entity type vs using a Content Type
+
+## Dupal8Cards #12 ­- Theming 101 #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* build a very basic 3 column D8 theme using "stable" as the base theme
+
+### Exercise
+
+1. Generate a new theme with “stable” as the base theme usingDrupal console.
+1. Define 3 regions (sidebar1, content, sidebar2 while generatingthe theme).
+1. Turn on Twig Debugging to see the template names in use, as well as template name suggestions (This is covered in our Day10 course) in the view source.
+1. Override page.html.twig in your theme such that 3 columns are rendered in the page.
