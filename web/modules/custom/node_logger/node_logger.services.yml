@@ -1,0 +1,5 @@
+services:
+  logger.channel.node_logger:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['node_logger']

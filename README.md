@@ -223,3 +223,15 @@ At the end of this course, you will be able to
 1. Define 3 regions (sidebar1, content, sidebar2 while generatingthe theme).
 1. Turn on Twig Debugging to see the template names in use, as well as template name suggestions (This is covered in our Day10 course) in the view source.
 1. Override page.html.twig in your theme such that 3 columns are rendered in the page.
+
+## Dupal8Cards #13 ­- Logging in D8 #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* use the replacement of watchdog() in D8
+
+### Exercise
+
+1. Build a small custom module, which adds to the “Recent Log Messages” a message of type “Node Updates” with the message “Node with title %NODE_TITLE% of type %NODE_TYPE% has been updated“ whenever a node is updated.

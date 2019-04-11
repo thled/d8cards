@@ -1,0 +1,10 @@
+<?php
+
+function node_logger_node_update(Drupal\node\NodeInterface $node)
+{
+  \Drupal::logger('node_logger')->notice(sprintf(
+    'Node with title %s of type %s has been updated',
+    $node->getTitle(),
+    $node->getType()
+  ));
+}
