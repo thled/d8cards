@@ -235,3 +235,7 @@ At the end of this course, you will be able to
 ### Exercise
 
 1. Build a small custom module, which adds to the “Recent Log Messages” a message of type “Node Updates” with the message “Node with title %NODE_TITLE% of type %NODE_TYPE% has been updated“ whenever a node is updated.
+
+## Dupal8Cards #14 ­- Features Module in D8 #
+
+* _skipped_
