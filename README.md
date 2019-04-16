@@ -252,3 +252,18 @@ In this course today, we will be revising the plugin system bycreating a custom 
 * Build a custom field formatter for decimal fields, which when selected for the display, will show the decimal value (between 0 and 5) as a collection of stars. (Of course quantized at 0.5 stars, as limited by the CSS we chose to implement.)
 
 CSS: http://www.webcodingeasy.com/Webdesign/Display-simple-CSS-star-rating
+
+## Dupal8Cards #16 ­- Dependency Injection Example / Service Container #
+
+### Objective
+
+We will be trying out an example today, in an attempt to use Dependency Injection by modifying an existing code without changing any functionality.
+
+### Exercise
+* Download the examples module from https://www.drupal.org/project/examples. It has a bunch of modules but we will be interested in the  page_example  module only, during the course of this exercise.
+* The module has a  PageExampleController  defined in src/Controller/PageExampleController.php. The  simple() method in this controller is responsible for rendering the url “examples/page_example/simple”  when the module is enabled.
+* Let’s modify this method by adding a line such that a log entry is made whenever this url is opened.
+    `\Drupal::logger('page_example_module')->notice('Simple Page was displayed');`
+* Now, this is the code we will start with for our exercise.
+* Modify the code to use dependency injection to give access to logger.factory service from our controller, which will be used to do the logging, instead of \Drupal::logger.
+* The links in additional resources are a great read towards achieving this.
