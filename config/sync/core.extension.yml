@@ -36,6 +36,7 @@ module:
   node_logger: 0
   options: 0
   page_cache: 0
+  page_example: 0
   path: 0
   queue_reg_mail: 0
   quickedit: 0
