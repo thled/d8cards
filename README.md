@@ -239,3 +239,16 @@ At the end of this course, you will be able to
 ## Dupal8Cards #14 ­- Features Module in D8 #
 
 * _skipped_
+
+## Dupal8Cards #15 ­- Creating a Custom Field Formatter #
+
+### Objective
+
+In this course today, we will be revising the plugin system bycreating a custom field formatter.
+
+### Exercise
+
+* On the Movie content type, create a Decimal field called Rating that accepts any decimal value between 0 and 5.
+* Build a custom field formatter for decimal fields, which when selected for the display, will show the decimal value (between 0 and 5) as a collection of stars. (Of course quantized at 0.5 stars, as limited by the CSS we chose to implement.)
+
+CSS: http://www.webcodingeasy.com/Webdesign/Display-simple-CSS-star-rating
