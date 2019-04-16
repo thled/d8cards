@@ -21,6 +21,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6.0",
+        "drupal/examples": "1.x-dev",
         "drupal/migrate_plus": "^4.0",
         "drupal/migrate_source_csv": "^2.2",
         "drupal/migrate_tools": "^4.0",
