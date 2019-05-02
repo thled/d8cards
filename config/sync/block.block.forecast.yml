@@ -1,0 +1,20 @@
+uuid: 1d66c775-996b-4adb-b461-3711ae58aecb
+langcode: en
+status: true
+dependencies:
+  module:
+    - forecast
+  theme:
+    - d8cards
+id: forecast
+theme: d8cards
+region: sidebar_first
+weight: 0
+provider: null
+plugin: forecast_block
+settings:
+  id: forecast_block
+  label: Forecast
+  provider: forecast
+  label_display: visible
+visibility: {  }
