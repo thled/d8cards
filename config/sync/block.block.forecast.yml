@@ -17,4 +17,6 @@ settings:
   label: Forecast
   provider: forecast
   label_display: visible
+  latitude: '51.2277'
+  longitude: '6.7735'
 visibility: {  }

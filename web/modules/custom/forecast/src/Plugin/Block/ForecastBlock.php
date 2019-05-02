@@ -4,6 +4,7 @@ namespace Drupal\forecast\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
+use Forecast\Forecast;
 
 /**
  * @Block(
@@ -46,13 +47,25 @@ class ForecastBlock extends BlockBase
     $latitude = $config['latitude'] ?? '0';
     $longitude = $config['longitude'] ?? '0';
 
+    // API key should not be in here - should be an env variable
+    $forecast = new Forecast('8d5093a7fa1fe90622af9b2f51c2a3dd');
+    $report = $forecast->get(
+      $latitude,
+      $longitude,
+      null,
+      [
+        'units' => 'si',
+      ]
+    );
+
     return [
       '#markup' => $this->t(
         'Forecast is @forecast with temperature of @temp deg C',
-      [
-        '@forecast' => 'Clear',
-        '@temp' => '19',
-      ]),
+        [
+          '@forecast' => $report->currently->summary,
+          '@temp' => $report->currently->temperature,
+        ]
+      ),
     ];
   }
 }
