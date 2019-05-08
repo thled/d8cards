@@ -283,3 +283,14 @@ In this session, we will see how we could leverage composer,and composer-merge-p
 * Build a custom block with a [configuration form that takes latitude and longitude in the configuration form](https://www.evernote.com/l/ASlXtGHPMWJP7aNyvPRqyjJdWlGtft5SxYA).
 * The block, when enabled should show the forecast for the configured location by a simple text as "Forecast is XXXXX with temperature of XXX deg C". This forecast information is retrieved using [Forecast wrapper library](https://packagist.org/packages/guhelski/forecast-php) that we included.
 * API Key you could use = `7411b0e6d5e0c99fbd7405fd6de00cd5` (Alternatively, you could register on forecast.io for the key).
+
+## Dupal8Cards #18 ­- Events and Subscriber #
+
+### Objective
+
+In this session, we will take a look into the Events and Subscribers which is a mechanism very similar to the Drupal’s hook system which allows one component of code to be triggered when something else is triggered.
+
+### Exercise
+
+* Modify the page_example module such that whenever the “examples/page_example/simple” page is loaded, an event “simple_page_load” is dispatched
+* In your custom module, subscribe to the earlier event. Implement some custom code in your subscriber (Say make an entry to database logging under “Simple Page” type with the message “Simple Page Loaded”).
