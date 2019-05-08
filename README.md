@@ -292,5 +292,5 @@ In this session, we will take a look into the Events and Subscribers which is a 
 
 ### Exercise
 
-* Modify the page_example module such that whenever the “examples/page_example/simple” page is loaded, an event “simple_page_load” is dispatched
+* Modify the page_example module such that whenever the “examples/page_example/simple” page is loaded, an event “simple_page_load” is dispatched.
 * In your custom module, subscribe to the earlier event. Implement some custom code in your subscriber (Say make an entry to database logging under “Simple Page” type with the message “Simple Page Loaded”).
