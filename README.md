@@ -260,6 +260,7 @@ CSS: http://www.webcodingeasy.com/Webdesign/Display-simple-CSS-star-rating
 We will be trying out an example today, in an attempt to use Dependency Injection by modifying an existing code without changing any functionality.
 
 ### Exercise
+
 * Download the examples module from https://www.drupal.org/project/examples. It has a bunch of modules but we will be interested in the  page_example  module only, during the course of this exercise.
 * The module has a  PageExampleController  defined in src/Controller/PageExampleController.php. The  simple() method in this controller is responsible for rendering the url “examples/page_example/simple”  when the module is enabled.
 * Let’s modify this method by adding a line such that a log entry is made whenever this url is opened.
@@ -267,3 +268,18 @@ We will be trying out an example today, in an attempt to use Dependency Injectio
 * Now, this is the code we will start with for our exercise.
 * Modify the code to use dependency injection to give access to logger.factory service from our controller, which will be used to do the logging, instead of \Drupal::logger.
 * The links in additional resources are a great read towards achieving this.
+
+## Dupal8Cards #17 ­- Composer in your module to load PHP libraries #
+
+### Objective
+
+In this session, we will see how we could leverage composer,and composer-merge-plugin to load PHP libraries / SDKs in our custom modules
+
+### Exercise
+
+* Create a custom module.
+* Update the module’s composer.json file to include this library <https://packagist.org/packages/guhelski/forecast­php>
+* Install `wikimedia/composer-merge-plugin`. Run `composer ­update` in root such that the mentioned library is fetched to the vendor folder and autoloaded and hence is available for use in your module.
+* Build a custom block with a [configuration form that takes latitude and longitude in the configuration form](https://www.evernote.com/l/ASlXtGHPMWJP7aNyvPRqyjJdWlGtft5SxYA).
+* The block, when enabled should show the forecast for the configured location by a simple text as "Forecast is XXXXX with temperature of XXX deg C". This forecast information is retrieved using [Forecast wrapper library](https://packagist.org/packages/guhelski/forecast-php) that we included.
+* API Key you could use = `7411b0e6d5e0c99fbd7405fd6de00cd5` (Alternatively, you could register on forecast.io for the key).
