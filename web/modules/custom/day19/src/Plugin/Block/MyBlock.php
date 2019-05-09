@@ -36,6 +36,8 @@ class MyBlock extends BlockBase {
       '#title' => $this->t('Test Title'),
       '#var1' => $this->t('Test Description'),
       '#var2' => $some_array,
+      '#classes' => ['very-long-class-name-with<>badsymbols', 'another---nasty-class!---name---'],
+      '#myclasscount' => 20,
     );
   }
 
