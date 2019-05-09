@@ -1,0 +1,10 @@
+name: Naked
+type: theme
+description: 'A clean theme for d8cards.'
+core: 8.x
+base theme: stable
+
+regions:
+  sidebar1: 'Sidebar left'
+  content: 'Main content'
+  sidebar2: 'Sidebar right'

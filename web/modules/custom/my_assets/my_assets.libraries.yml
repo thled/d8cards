@@ -1,0 +1,9 @@
+fancy-tables:
+  version: 1.0
+  css:
+    theme:
+      css/fancy-tables.css: {}
+fancy-blocks:
+  version: 1.0
+  js:
+    js/fancy-blocks.js: {}

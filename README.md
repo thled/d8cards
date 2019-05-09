@@ -158,3 +158,139 @@ At the end of this course, you will be able to
 
 1. Create a custom text filter that could be added to any text format, which auto­capitalizes pre­configured words anywhere they occur in the filtered text
 1. The filter has a configuration form that allows to configure the list of words that should be auto­capitalized
+
+## Dupal8Cards #09 ­- Attaching assets (CSS/JS) #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* add JS/CSS to a module or a theme to be available on selection / all pages
+
+### Exercise
+
+1. Create a custom module and add a CSS and JS file in appropriate subdirectories in the module.
+1. Create a libraries.yml file and define 2 libraries one for each of the CSS and JS.
+1. Attach the CSS such that it is loaded for all Table elements shown anywhere on the site. [Hint](https://www.evernote.com/shard/s297/sh/d9be02e1-7167-42ff-b021-a1915c171794/d8fe46c64cc54283)
+1. Take any custom block that you have built over the previous exercises. Modify the build() to attach the JS to be loaded whenever the block is displayed. [Hint](https://www.evernote.com/shard/s297/sh/ad090511-4c94-4209-922a-13f934ddd704/fd6c52cfe8bddab3)
+
+## Dupal8Cards #10 ­- Configuring your local site for Development #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* Setting up your settings.local.php
+* Null Cache Service
+* Disabling Twig Cache
+* rebuild.php
+
+### Exercise
+
+1. On your local D8 site, perform all the configuration changes mentioned on the video tutorial.
+
+    Video tutorial: <https://www.youtube.com/watch?v=rRsOxSuJ4OU>
+
+## Dupal8Cards #11 ­- Creating a Custom D8 Content Entity Type #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* create a content entity type with administration management pages
+
+### Exercise
+
+1. Create a custom content entity type called “Contact” with the following fields:
+    * Name
+    * Email Address
+    * Telephone
+    * Address
+1. Build / Provide a minimal CRUD management page to manage the custom contact entities
+1. Explore why would you even want to define a custom entity type vs using a Content Type
+
+## Dupal8Cards #12 ­- Theming 101 #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* build a very basic 3 column D8 theme using "stable" as the base theme
+
+### Exercise
+
+1. Generate a new theme with “stable” as the base theme usingDrupal console.
+1. Define 3 regions (sidebar1, content, sidebar2 while generatingthe theme).
+1. Turn on Twig Debugging to see the template names in use, as well as template name suggestions (This is covered in our Day10 course) in the view source.
+1. Override page.html.twig in your theme such that 3 columns are rendered in the page.
+
+## Dupal8Cards #13 ­- Logging in D8 #
+
+### Objective
+
+At the end of this course, you will be able to
+
+* use the replacement of watchdog() in D8
+
+### Exercise
+
+1. Build a small custom module, which adds to the “Recent Log Messages” a message of type “Node Updates” with the message “Node with title %NODE_TITLE% of type %NODE_TYPE% has been updated“ whenever a node is updated.
+
+## Dupal8Cards #14 ­- Features Module in D8 #
+
+* _skipped_
+
+## Dupal8Cards #15 ­- Creating a Custom Field Formatter #
+
+### Objective
+
+In this course today, we will be revising the plugin system bycreating a custom field formatter.
+
+### Exercise
+
+* On the Movie content type, create a Decimal field called Rating that accepts any decimal value between 0 and 5.
+* Build a custom field formatter for decimal fields, which when selected for the display, will show the decimal value (between 0 and 5) as a collection of stars. (Of course quantized at 0.5 stars, as limited by the CSS we chose to implement.)
+
+CSS: http://www.webcodingeasy.com/Webdesign/Display-simple-CSS-star-rating
+
+## Dupal8Cards #16 ­- Dependency Injection Example / Service Container #
+
+### Objective
+
+We will be trying out an example today, in an attempt to use Dependency Injection by modifying an existing code without changing any functionality.
+
+### Exercise
+
+* Download the examples module from https://www.drupal.org/project/examples. It has a bunch of modules but we will be interested in the  page_example  module only, during the course of this exercise.
+* The module has a  PageExampleController  defined in src/Controller/PageExampleController.php. The  simple() method in this controller is responsible for rendering the url “examples/page_example/simple”  when the module is enabled.
+* Let’s modify this method by adding a line such that a log entry is made whenever this url is opened.
+    `\Drupal::logger('page_example_module')->notice('Simple Page was displayed');`
+* Now, this is the code we will start with for our exercise.
+* Modify the code to use dependency injection to give access to logger.factory service from our controller, which will be used to do the logging, instead of \Drupal::logger.
+* The links in additional resources are a great read towards achieving this.
+
+## Dupal8Cards #17 ­- Composer in your module to load PHP libraries #
+
+### Objective
+
+In this session, we will see how we could leverage composer,and composer-merge-plugin to load PHP libraries / SDKs in our custom modules
+
+### Exercise
+
+* Create a custom module.
+* Update the module’s composer.json file to include this library <https://packagist.org/packages/guhelski/forecast­php>
+* Install `wikimedia/composer-merge-plugin`. Run `composer ­update` in root such that the mentioned library is fetched to the vendor folder and autoloaded and hence is available for use in your module.
+* Build a custom block with a [configuration form that takes latitude and longitude in the configuration form](https://www.evernote.com/l/ASlXtGHPMWJP7aNyvPRqyjJdWlGtft5SxYA).
+* The block, when enabled should show the forecast for the configured location by a simple text as "Forecast is XXXXX with temperature of XXX deg C". This forecast information is retrieved using [Forecast wrapper library](https://packagist.org/packages/guhelski/forecast-php) that we included.
+* API Key you could use = `7411b0e6d5e0c99fbd7405fd6de00cd5` (Alternatively, you could register on forecast.io for the key).
+
+## Dupal8Cards #18 ­- Events and Subscriber #
+
+### Objective
+
+In this session, we will take a look into the Events and Subscribers which is a mechanism very similar to the Drupal’s hook system which allows one component of code to be triggered when something else is triggered.
+
+### Exercise
+
+* Modify the page_example module such that whenever the “examples/page_example/simple” page is loaded, an event “simple_page_load” is dispatched.
+* In your custom module, subscribe to the earlier event. Implement some custom code in your subscriber (Say make an entry to database logging under “Simple Page” type with the message “Simple Page Loaded”).

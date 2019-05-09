@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.movie.field_actors
     - field.field.node.movie.field_genre
     - field.field.node.movie.field_plot
+    - field.field.node.movie.field_rating
     - node.type.movie
   module:
+    - cff_stars
     - text
     - user
 id: node.movie.default
@@ -38,9 +40,16 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  links:
-    weight: 100
+  field_rating:
+    weight: 105
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: cff_stars
     region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

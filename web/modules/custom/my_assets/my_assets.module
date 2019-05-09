@@ -1,0 +1,15 @@
+<?php
+
+function my_assets_element_info_alter(array &$types)
+{
+  if (isset($types['table'])) {
+    $types['table']['#attached']['library'][] = 'my_assets/fancy-tables';
+  }
+}
+
+function my_assets_block_view_block_content_alter(
+  array &$build,
+  \Drupal\Core\Block\BlockPluginInterface $block
+) {
+  $build['#attached']['library'][] = 'my_assets/fancy-blocks';
+}

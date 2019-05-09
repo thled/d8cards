@@ -1,0 +1,11 @@
+<?php
+
+function cff_stars_theme()
+{
+  return [
+    'cff_stars' => [
+      'template' => 'cff-stars',
+      'variables' => ['stars' => null],
+    ]
+  ];
+}

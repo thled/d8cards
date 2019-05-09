@@ -1,0 +1,5 @@
+name: Custom Content Entity Type Contact
+type: module
+description: 'Provides the custom content entity type Contact.'
+core: 8.x
+package: ccet

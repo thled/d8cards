@@ -1,0 +1,5 @@
+{
+    "require": {
+        "guhelski/forecast-php": "^1.1"
+    }
+}

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.movie.field_actors
     - field.field.node.movie.field_genre
     - field.field.node.movie.field_plot
+    - field.field.node.movie.field_rating
     - node.type.movie
   module:
     - path
@@ -46,6 +47,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
+    region: content
+  field_rating:
+    weight: 125
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   path:
     type: path

@@ -1,0 +1,5 @@
+ccet_contact.add:
+  route_name: ccet_contact.add
+  title: 'Add contact'
+  appears_on:
+    - ccet_contact.collection
