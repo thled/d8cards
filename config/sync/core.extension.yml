@@ -44,6 +44,7 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
+  simple_page_event: 0
   stock_api: 0
   system: 0
   taxonomy: 0

@@ -1,0 +1,5 @@
+services:
+        simple_page_event.page_load_subscriber:
+                class: Drupal\simple_page_event\EventSubscriber\PageLoadSubscriber 
+                tags:
+                        - { name: event_subscriber }
