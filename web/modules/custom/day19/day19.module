@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains day19.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function day19_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the day19 module.
+    case 'help.page.day19':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Study Group Day 19') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Theme hook
+ */
+function day19_theme($existing, $type, $theme, $path) {
+  return array(
+    'day19_twig_test' => array(
+      'variables' => array(
+        'var1' => NULL,
+        'var2' => NULL,
+      ),
+    ),
+  );
+}
