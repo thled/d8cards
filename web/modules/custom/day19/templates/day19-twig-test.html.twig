@@ -1,0 +1,23 @@
+{# {{dump(classes)}} #}
+
+{% set cleanedClasses = [] %}
+{% for class in classes %}
+  {% set cleanedClasses = cleanedClasses|merge([class|clean_class]) %}
+{% endfor %}
+
+<span {{ attributes.addClass(cleanedClasses) }}>
+  {% if var1 %}
+    {{ var1 }}
+  {% endif %}
+</span>
+
+{{ var2.3.g }}
+
+{% set minionClasses = [] %}
+{% for i in 0..myclasscount %}
+  {% set minionClasses = minionClasses|merge(['minion'~i]) %}
+{% endfor %}
+
+<div {{ attributes.addClass(minionClasses).removeClass(cleanedClasses) }}>
+  {{ 'Hello'|t }}
+</div>

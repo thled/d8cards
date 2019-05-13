@@ -1,0 +1,20 @@
+uuid: 1b46b06b-9f93-4d62-9bfb-880f19d0c718
+langcode: en
+status: true
+dependencies:
+  module:
+    - day19
+  theme:
+    - d8cards
+id: myblock
+theme: d8cards
+region: sidebar_second
+weight: 0
+provider: null
+plugin: my_block
+settings:
+  id: my_block
+  label: 'My block'
+  provider: day19
+  label_display: visible
+visibility: {  }
