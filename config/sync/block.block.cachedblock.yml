@@ -1,0 +1,20 @@
+uuid: cbf8cb75-953f-444a-9ee4-d3e5b791ef9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - cached_block
+  theme:
+    - d8cards
+id: cachedblock
+theme: d8cards
+region: sidebar_second
+weight: 0
+provider: null
+plugin: cached_block
+settings:
+  id: cached_block
+  label: 'Cached Block'
+  provider: cached_block
+  label_display: visible
+visibility: {  }
