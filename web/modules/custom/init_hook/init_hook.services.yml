@@ -1,0 +1,7 @@
+services:
+        init_hook.allow_access_origin:
+                class: Drupal\init_hook\EventSubscriber\InitHookSubscriber
+                arguments:
+                        - '@current_user'
+                tags:
+                        - {name: event_subscriber}

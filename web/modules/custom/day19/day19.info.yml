@@ -1,0 +1,5 @@
+name: Day 19
+type: module
+description: Study Group Day 19
+core: 8.x
+package: Custom

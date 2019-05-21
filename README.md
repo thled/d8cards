@@ -248,8 +248,8 @@ In this course today, we will be revising the plugin system bycreating a custom 
 
 ### Exercise
 
-* On the Movie content type, create a Decimal field called Rating that accepts any decimal value between 0 and 5.
-* Build a custom field formatter for decimal fields, which when selected for the display, will show the decimal value (between 0 and 5) as a collection of stars. (Of course quantized at 0.5 stars, as limited by the CSS we chose to implement.)
+1. On the Movie content type, create a Decimal field called Rating that accepts any decimal value between 0 and 5.
+1. Build a custom field formatter for decimal fields, which when selected for the display, will show the decimal value (between 0 and 5) as a collection of stars. (Of course quantized at 0.5 stars, as limited by the CSS we chose to implement.)
 
 CSS: http://www.webcodingeasy.com/Webdesign/Display-simple-CSS-star-rating
 
@@ -261,13 +261,13 @@ We will be trying out an example today, in an attempt to use Dependency Injectio
 
 ### Exercise
 
-* Download the examples module from https://www.drupal.org/project/examples. It has a bunch of modules but we will be interested in the  page_example  module only, during the course of this exercise.
-* The module has a  PageExampleController  defined in src/Controller/PageExampleController.php. The  simple() method in this controller is responsible for rendering the url “examples/page_example/simple”  when the module is enabled.
-* Let’s modify this method by adding a line such that a log entry is made whenever this url is opened.
+1. Download the examples module from https://www.drupal.org/project/examples. It has a bunch of modules but we will be interested in the  page_example  module only, during the course of this exercise.
+1. The module has a  PageExampleController  defined in src/Controller/PageExampleController.php. The  simple() method in this controller is responsible for rendering the url “examples/page_example/simple”  when the module is enabled.
+1. Let’s modify this method by adding a line such that a log entry is made whenever this url is opened.
     `\Drupal::logger('page_example_module')->notice('Simple Page was displayed');`
-* Now, this is the code we will start with for our exercise.
-* Modify the code to use dependency injection to give access to logger.factory service from our controller, which will be used to do the logging, instead of \Drupal::logger.
-* The links in additional resources are a great read towards achieving this.
+1. Now, this is the code we will start with for our exercise.
+1. Modify the code to use dependency injection to give access to logger.factory service from our controller, which will be used to do the logging, instead of \Drupal::logger.
+1. The links in additional resources are a great read towards achieving this.
 
 ## Dupal8Cards #17 ­- Composer in your module to load PHP libraries #
 
@@ -277,12 +277,12 @@ In this session, we will see how we could leverage composer,and composer-merge-p
 
 ### Exercise
 
-* Create a custom module.
-* Update the module’s composer.json file to include this library <https://packagist.org/packages/guhelski/forecast­php>
-* Install `wikimedia/composer-merge-plugin`. Run `composer ­update` in root such that the mentioned library is fetched to the vendor folder and autoloaded and hence is available for use in your module.
-* Build a custom block with a [configuration form that takes latitude and longitude in the configuration form](https://www.evernote.com/l/ASlXtGHPMWJP7aNyvPRqyjJdWlGtft5SxYA).
-* The block, when enabled should show the forecast for the configured location by a simple text as "Forecast is XXXXX with temperature of XXX deg C". This forecast information is retrieved using [Forecast wrapper library](https://packagist.org/packages/guhelski/forecast-php) that we included.
-* API Key you could use = `7411b0e6d5e0c99fbd7405fd6de00cd5` (Alternatively, you could register on forecast.io for the key).
+1. Create a custom module.
+1. Update the module’s composer.json file to include this library <https://packagist.org/packages/guhelski/forecast­php>
+1. Install `wikimedia/composer-merge-plugin`. Run `composer ­update` in root such that the mentioned library is fetched to the vendor folder and autoloaded and hence is available for use in your module.
+1. Build a custom block with a [configuration form that takes latitude and longitude in the configuration form](https://www.evernote.com/l/ASlXtGHPMWJP7aNyvPRqyjJdWlGtft5SxYA).
+1. The block, when enabled should show the forecast for the configured location by a simple text as "Forecast is XXXXX with temperature of XXX deg C". This forecast information is retrieved using [Forecast wrapper library](https://packagist.org/packages/guhelski/forecast-php) that we included.
+1. API Key you could use = `7411b0e6d5e0c99fbd7405fd6de00cd5` (Alternatively, you could register on forecast.io for the key).
 
 ## Dupal8Cards #18 ­- Events and Subscriber #
 
@@ -292,5 +292,39 @@ In this session, we will take a look into the Events and Subscribers which is a 
 
 ### Exercise
 
-* Modify the page_example module such that whenever the “examples/page_example/simple” page is loaded, an event “simple_page_load” is dispatched.
-* In your custom module, subscribe to the earlier event. Implement some custom code in your subscriber (Say make an entry to database logging under “Simple Page” type with the message “Simple Page Loaded”).
+1. Modify the page_example module such that whenever the “examples/page_example/simple” page is loaded, an event “simple_page_load” is dispatched.
+1. In your custom module, subscribe to the earlier event. Implement some custom code in your subscriber (Say make an entry to database logging under “Simple Page” type with the message “Simple Page Loaded”).
+
+## Dupal8Cards #19 ­- Twig Templating #
+
+### Objective
+
+In this session, we will take a look at basics of Twig Templating, that has replaced the PHPTemplate engine in Drupal.
+
+### Exercise
+
+1. Download and install [this module](https://github.com/saitanay/day19/archive/master.zip). This module provides a very basic block whose template is "day19/templates/day19‐twig‐test.html.twig". The build() of the block provides variables­ "var1, var2, classes, myclasscount" that are available in the template to be used.
+1. Place the block provided by the module ("My Block") onto a region on your site from block admin interface, so you can view the block.
+1. If you see the block display "Your template goes here.."­ you are all set now. Go further.
+1. Now modify the template as below
+    1. If "var1" is set, print the value of "var1".
+    1. Move the output of "var1" to a "<span>" whose class names are those provided by "classes" variable passed to the template (Hint:­ Ensure that the class names are cleaned enough so they deserve to be class names).
+    1. Print the variable "$var2[3][‘g’]".
+    1. Print the word "Hello", such that it can be translated using the admin translation interface.
+    1. Move the "Hello" string into a "<div>" such that the div has all classes in the pattern "minion0, minion1, minion2, minion3, minion4.....till minionX", where "X" is provided by the value of "myclasscount" variable.
+    1. Try out "{{ dump() }}" and "{{ dump(var1) }}" on the template to see how the printed variables show up on the screen.
+1. With the above changes, the markup of the rendered block is expected to besomething like [this](https://www.evernote.com/l/ASnkTipykNpL5ZxfvW-jwahb4BY_KK4w-hg).
+
+### Bonus Exercise
+
+* The provided solution has a bug wherein the classes added to the span enclosing "var1", are also added as classes to the div enclosing the translatable "Hello" String. Fix the template.
+
+## Dupal8Cards #21 ­- Replacing hook_init #
+
+### Objective
+
+Although doing stuff in hook_init is avoided as there is always a better way of doing the same thing elsewhere. We have taken a look at the event subscriber system on Day­ 18. We will be extending the same to hook into the page response to do something before every response is rendered, just as you did with hook_init().
+
+### Exercise
+
+1. Build a custom module such that the header `Access-Control-Allow-Origin: *` is added to the page response only for Anonymous users.
