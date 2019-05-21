@@ -318,3 +318,13 @@ In this session, we will take a look at basics of Twig Templating, that has repl
 ### Bonus Exercise
 
 * The provided solution has a bug wherein the classes added to the span enclosing "var1", are also added as classes to the div enclosing the translatable "Hello" String. Fix the template.
+
+## Dupal8Cards #21 ­- Replacing hook_init #
+
+### Objective
+
+Although doing stuff in hook_init is avoided as there is always a better way of doing the same thing elsewhere. We have taken a look at the event subscriber system on Day­ 18. We will be extending the same to hook into the page response to do something before every response is rendered, just as you did with hook_init().
+
+### Exercise
+
+1. Build a custom module such that the header `Access-Control-Allow-Origin: *` is added to the page response only for Anonymous users.
